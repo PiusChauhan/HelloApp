@@ -7,13 +7,11 @@ public class Main {
             System.out.println("Hello World!");
         } else {
             StringBuilder nameBuilder = new StringBuilder();
-            boolean first = true;
             for (String name : args) {
-                if (!first) {
-                    nameBuilder.append(", ");
-                }
-                nameBuilder.append(name);
-                first = false;
+                nameBuilder.append(name).append(", ");
+            }
+            if (nameBuilder.length() > 0) {
+                nameBuilder = new StringBuilder(nameBuilder.substring(0, nameBuilder.length() - 2));
             }
             System.out.println("Hello " + nameBuilder + "!");
         }
