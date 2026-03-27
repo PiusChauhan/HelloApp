@@ -3,8 +3,12 @@ package org.example;
 
 public class Main {
     static void main(String[] args) {
-        String name=args[0];
-        System.out.println("Hello " + name + "!");
+        if (args.length == 0) {
+            System.out.println("Hello World!");
+        } else {
+            String name = args[0];
+            System.out.println("Hello " + name + "!");
+        }
 
 
 
