@@ -6,8 +6,14 @@ public class Main {
         if (args.length == 0) {
             System.out.println("Hello World!");
         } else {
-            String name = args[0];
-            System.out.println("Hello " + name + "!");
+            StringBuilder names = new StringBuilder();
+            for (int i = 0; i < args.length; i++) {
+                names.append(args[i]);
+                if (i < args.length - 1) {
+                    names.append(", ");
+                }
+            }
+            System.out.println("Hello " + names + "!");
         }
 
 
